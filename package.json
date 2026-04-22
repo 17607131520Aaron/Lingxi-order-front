@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "biome format --write .",
     "preview": "vite preview",
+    "biome": "biome format .",
+    "biome:fix": "biome format --write .",
+    "biome:format": "biome format --write .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

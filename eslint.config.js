@@ -73,10 +73,7 @@ export default [
     rules: {
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true },
-      ],
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "react/jsx-uses-react": "error",
       "react/jsx-uses-vars": "error",
       "react/jsx-no-undef": "error",
@@ -84,10 +81,7 @@ export default [
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
       "react/display-name": "off",
-      "react/jsx-curly-brace-presence": [
-        "error",
-        { props: "never", children: "never" },
-      ],
+      "react/jsx-curly-brace-presence": ["error", { props: "never", children: "never" }],
       "react/jsx-boolean-value": ["error", "never"],
       "react/self-closing-comp": "error",
       "react/jsx-sort-props": [
@@ -150,10 +144,7 @@ export default [
           objectLiteralTypeAssertions: "never",
         },
       ],
-      "@typescript-eslint/no-misused-promises": [
-        "error",
-        { checksVoidReturn: false },
-      ],
+      "@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: false }],
       "@typescript-eslint/await-thenable": "error",
       "@typescript-eslint/no-unsafe-argument": "error",
       "no-return-await": "off",
@@ -174,8 +165,7 @@ export default [
           format: ["PascalCase"],
           prefix: ["I"],
           filter: {
-            regex:
-              "^(ImportMeta|ImportMetaEnv|NodeJS|Window|Document|HTMLElement|ReactBarcodeProps|QRCodeProps)$",
+            regex: "^(ImportMeta|ImportMetaEnv|NodeJS|Window|Document|HTMLElement|ReactBarcodeProps|QRCodeProps)$",
             match: false,
           },
         },
@@ -221,16 +211,7 @@ export default [
       "import/order": [
         "error",
         {
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-            "object",
-            "type",
-          ],
+          groups: ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
           pathGroups: [
             {
               pattern: "react",
@@ -258,11 +239,7 @@ export default [
               position: "after",
             },
           ],
-          pathGroupsExcludedImportTypes: [
-            "react",
-            "react-dom",
-            "react-router-dom",
-          ],
+          pathGroupsExcludedImportTypes: ["react", "react-dom", "react-router-dom"],
           "newlines-between": "always",
           alphabetize: {
             order: "asc",
@@ -289,12 +266,7 @@ export default [
     },
   },
   {
-    files: [
-      "eslint.config.js",
-      "eslint.config.mjs",
-      "rsbuild.config.ts",
-      "rstest.config.ts",
-    ],
+    files: ["eslint.config.js", "eslint.config.mjs", "rsbuild.config.ts", "rstest.config.ts"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
