@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import babel from "@rolldown/plugin-babel";
+import qiankun from "vite-plugin-qiankun";
 
 // https://vite.dev/config/
 import path from "node:path";
@@ -18,15 +19,21 @@ export default defineConfig({
     babel({
       presets: [reactCompilerPreset()],
     }),
+    qiankun("lingxi-order-front", {
+      useDevMode: true,
+    }),
   ],
 
   server: {
     cors: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
     host: "0.0.0.0",
-    open: true,
+    open: false,
     port: 8001,
     proxy: {},
-    strictPort: false,
+    strictPort: true,
   },
 
   resolve: {
